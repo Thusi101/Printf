@@ -1,5 +1,5 @@
-#define PRINTF_H
-#ifndef PRINTF_H
+#define MAIN_H
+#ifndef MAIN_H
 
 #include <limits.h>
 #include <stdio.h>
@@ -47,6 +47,6 @@ int print_revs(va_list args);
 int print_unsigned(va_list args);
 int _strlen(char *s);
 int rev_string(char *s);
-int putchar(char c);
+int _putchar(char c);
 
 #endif
