@@ -1,11 +1,11 @@
 #define MAIN_H
 #ifndef MAIN_H
 
+#include <stdlib.h>
+#include <unistd.h>
 #include <limits.h>
 #include <stdio.h>
 #include <stdarg.h>
-#include <stdlib.h>
-#include <unistd.h>
 
 /**
  * struct format - Printf Magic.
@@ -42,7 +42,7 @@ int print_bin(va_list val);
 int print_52(void);
 int print_d(va_list args);
 int print_i(va_list args);
-int print_rot13(va_list args);
+int print_rot(va_list args);
 int print_revs(va_list args);
 int print_unsigned(va_list args);
 int _strlen(char *s);
