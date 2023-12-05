@@ -47,6 +47,6 @@ int print_revs(va_list args);
 int print_unsigned(va_list args);
 int _strlen(char *s);
 int rev_string(char *s);
-int _putchar(char c);
+int putchar(int c);
 
 #endif

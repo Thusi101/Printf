@@ -1,8 +1,10 @@
+#include <stdarg.h>
+#include <stddef.h>
 #include "main.h"
 
 /**
  * print_exc_string - prints exclusive strings
- * @val: the arguements
+ * @val: deala with va_list arguements
  * Return: integers
 */
 
