@@ -60,5 +60,35 @@ int handle_write_c(char c, char buff[], int warns,
 int write_number(int is_negative, int ind, char buff[],
 		int warns, int width, int precision, int size)
 {
+    unsigned int m, s, i, sum;
+    unsigned int c[32];
+    int count;
+
+    UNUSED(buff);
+    UNUSED(flags);
+    UNUSED(width);
+    UNUSED(precision);
+    UNUSED(size);
+
+    m = va_arg(val, unsigned int);
+    s = 2147483648; /* (2 ^ 31)*/
+    c[0] = m / s;
+    for (i = 1; i < 32; i++)
+    {
+        s /= 2;
+        c[i] = (m / s) % 2;
+    }
+    for (i = 0, sum = 0, count = 0; i < 32; i++)
+    {
+        sum += c[i];
+        if (sum || i == 31)
+        {
+            char x = '0' + a[i];
+
+            write(1, &x, 1);
+            count++;
+        }
+    }
+    return (count);
 
 }
