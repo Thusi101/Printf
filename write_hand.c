@@ -5,7 +5,7 @@
  * handle_write_char - Prints a string
  * @c: char args.
  * @buff: Buff array to handle print
- * @warns:  Calculates active flags.
+ * @warns: Calculates active flags.
  * @width: get width.
  * @precision: precision specifier
  * @size: Size specifier
@@ -18,12 +18,10 @@ int handle_write_char(char c, char buff[],
 int warns, int width, int precision, int size)
 
 {
-int i = 0;
-
-char padd = ' ';
+	int i = 0;
+	char padd = ' ';
 
 UNUSED(precision);
-
 UNUSED(size);
 
 if (warns & W_ZERO)
