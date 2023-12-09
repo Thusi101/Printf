@@ -73,7 +73,7 @@ return (write(1, &buff[0], 1));
  * Return: Number of chars printed.
  */
 
-int write_num_n(int is_negative, int ind, char buff[], char padd,
+int write_num_n(int is_negative, int ind, char buff[], char padd, 
 		int warns, int width, int precision, int size)
 {
 

@@ -196,7 +196,7 @@ num /= 10;
 
 i++;
 
-return (write_num_n(is_negative, ind, buff, warns, width, precision, size, extra_c, padd));
+return write_num_n(is_negative, ind, buff, width, precision, size, padd);
 
 
 /**
@@ -209,17 +209,12 @@ return (write_num_n(is_negative, ind, buff, warns, width, precision, size, extra
  * @size: Size specifier
  * Return: Numbers of char printed.
  */
-
 int print_binary(va_list args, char buff[],
 int warns, int width, int precision, int size)
-
 {
-
-unsigned int n, m, i, sum;
-
-unsigned int a[32];
-
-int count;
+	unsigned int n, m, i, sum;
+	unsigned int a[32];
+	int count;
 
 UNUSED(buff);
 UNUSED(warns);
@@ -266,5 +261,7 @@ count++;
 }
 
 return (count);
+
+}
 
 }
