@@ -70,8 +70,6 @@ if (precision >= 0 && precision < length)
 
 length = precision;
 
-
-
 if (width > length)
 
 {
@@ -162,6 +160,10 @@ long int n = va_arg(args, long int);
 
 unsigned long int num;
 
+char extra_c = ' ';
+char padd = ' ';
+int ind = 0;
+
 n = convert_size_number(n, size);
 
 if (n == 0)
@@ -194,10 +196,7 @@ num /= 10;
 
 i++;
 
-return (write_num(is_negative, i, buff, warns,
-			width, precision, size, extra_c, padd));
-
-}
+return (write_num_n(is_negative, ind, buff, warns, width, precision, size, extra_c, padd));
 
 
 /**

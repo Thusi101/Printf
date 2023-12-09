@@ -74,7 +74,6 @@ ind++;
 /*return (write(1, &buff[i], BUFF_SIZE - i - 1));*/
 
 return (write_pointer(buff, ind, length,
-
 width, warns, padd, extra_c, padd_start));
 
 }

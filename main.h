@@ -112,20 +112,14 @@ int get_precision(const char *format, int *i, va_list list);
 int get_size(const char *format, int *i);
 
 
-
-
 int print_rev(va_list args, char buff[],
 
 int warns, int width, int precision, int size);
 
 
-
-
 int print_ascii13_s(va_list args, char buff[],
 
 int warns, int width, int precision, int size);
-
-
 
 
 int handle_write_char(char c, char buff[],
@@ -142,9 +136,7 @@ int write_num(int ind, char bff[], int flags, int width, int precision,
 	int length, char padd, char extra_c);
 
 int write_pointer(char buff[], int ind, int length,
-
-int width, int warns, char padd, char extra_c);
-
+		int width, int warns, char padd, char extra_c, int padd_start);
 
 
 int write_unsgnd(int is_negative, int ind,
@@ -158,7 +150,6 @@ int is_printable(char);
 int append_hexa_code(char, char[], int);
 
 int is_digit(char);
-
 
 
 long int convert_size_number(long int num, int size);
