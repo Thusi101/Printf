@@ -194,7 +194,8 @@ num /= 10;
 
 i++;
 
-return (write_num(is_negative, i, buff, warns, width, precision, size));
+return (write_num(is_negative, i, buff, warns,
+			width, precision, size, extra_c, padd));
 
 }
 
